@@ -3,6 +3,8 @@ import { Country as CountryList, City, State } from 'country-state-city';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { ArrowBack } from '@mui/icons-material';
 import Topbar from '../components/Topbar';
+import { useState } from 'react';
+import SidebarMobile from '../components/SidebarMobile';
 
 const Country = () => {
   const { countryIsoCode } = useParams();
@@ -10,6 +12,7 @@ const Country = () => {
   const numOfStates = State.getStatesOfCountry(countryIsoCode);
   const numOfCities = City.getCitiesOfCountry(countryIsoCode);
   const navigate = useNavigate();
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <HelmetProvider>
@@ -17,7 +20,7 @@ const Country = () => {
         <title>{country.name} | detalhes do país</title>
       </Helmet>
       <div className='full-country'>
-        <Topbar />
+        <Topbar setShowMenu={() => setShowMenu(!showMenu)} />
 
         <div className='full-country__details'>
           <div className='full-country__back' onClick={() => navigate('../')}>
@@ -58,6 +61,10 @@ const Country = () => {
           </div>
         </div>
       </div>
+      <SidebarMobile
+        showMenu={showMenu}
+        setShowMenu={() => setShowMenu(!showMenu)}
+      />
     </HelmetProvider>
   );
 };
