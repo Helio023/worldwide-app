@@ -16,7 +16,7 @@ A trabalhar com:
 Espero que tenha um conhecimento básico em **Reactjs**
 
 ## Links
-Veja a app [aqui](worldwide.netlify.app)
+Veja a app [aqui](https://worldwidemoz.netlify.app/)
 
 ---
 ---
@@ -39,7 +39,7 @@ To work with:
 I expect you to have a basic understanding of **Reactjs**
 
 ## links
-See the app live [here](worldwide.netlify.app)
+See the app live [here](https://worldwidemoz.netlify.app/)
 
 
 
