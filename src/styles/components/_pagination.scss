@@ -1,0 +1,45 @@
+.pagination {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  justify-content: center;
+
+  &__back,
+  &__next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid $gray;
+    background-color: $white;
+    color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+
+    &:disabled {
+      background-color: #eee;
+      cursor: auto;
+      color: $gray;
+    }
+  }
+
+  &__pagesNumber {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__page {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid $gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+  }
+}

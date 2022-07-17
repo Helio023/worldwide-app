@@ -1,0 +1,65 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($black, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s;
+  transform: translateX(-100%);
+
+  &.show {
+    pointer-events: all;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.sidebarMobile {
+  flex: 2;
+  background-color: $white;
+  padding: 50px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  box-shadow: 0 5px 10px rgba($black, 0.2);
+  transform: translateX(-100%);
+  transition: all 0.2s ease;
+  &.show {
+    transform: translateX(0%);
+  }
+
+  &__menu {
+    margin-top: 50px;
+  }
+
+  &__link {
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      @include linkStyles;
+    }
+
+    &--active {
+      @include linkStyles;
+      background-color: transparent;
+      color: $pink;
+
+      &::before {
+        background-color: transparent;
+      }
+    }
+  }
+}

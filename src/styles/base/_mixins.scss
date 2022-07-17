@@ -1,0 +1,22 @@
+@mixin linkStyles {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  margin-bottom: 10px;
+  transition: all .3s ease;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $pink;
+  }
+}

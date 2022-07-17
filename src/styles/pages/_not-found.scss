@@ -1,0 +1,18 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  height: 100vh;
+
+  &__header {
+    font-weight: 400;
+    color: $gray;
+  }
+
+  &__link {
+    color: $pink;
+    font-size: 18px;
+  }
+}

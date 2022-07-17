@@ -1,0 +1,32 @@
+.sidebar {
+  flex: 2;
+  background-color: $white;
+  padding: 50px 20px;
+  @media (max-width: 638px) {
+    display: none;
+  }
+
+  &__menu {
+    margin-top: 50px;
+  }
+
+  &__link {
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      @include linkStyles;
+    }
+
+    &--active {
+      @include linkStyles;
+    }
+  }
+}
