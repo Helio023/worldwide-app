@@ -114,6 +114,9 @@
     gap: 50px;
     height: 500px;
     overflow-y: auto;
+    @media (max-width: 560px) {
+      gap: 20px;
+    }
   }
 
   &__header {
@@ -123,7 +126,6 @@
     font-weight: 500;
   }
   &__item {
-    // text-align: center;
     padding: 10px;
 
     &:nth-child(odd) {
@@ -144,7 +146,6 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  
 
   h1 {
     font-weight: 500;

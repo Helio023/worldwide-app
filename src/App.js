@@ -10,8 +10,8 @@ const App = () => {
     <>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='country/:countryIsoCode' element={<Country />} />
         <Route path='/states' element={<States />} />
-        <Route path='/country/:countryIsoCode' element={<Country />} />
         <Route path='*' element={<NotFound />}/>
       </Routes>
     </>

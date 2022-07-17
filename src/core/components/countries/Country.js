@@ -10,7 +10,7 @@ const Country = ({ country }) => {
   const navigate = useNavigate();
 
   const handleViewPage = (countryIsoCode) => {
-    navigate(`country/${countryIsoCode}`);
+    navigate(`/country/${countryIsoCode}`);
   };
   return (
     <div className='country'>
