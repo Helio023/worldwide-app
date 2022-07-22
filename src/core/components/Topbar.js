@@ -8,7 +8,7 @@ import {
 
 const Topbar = ({ setShowMenu }) => {
   return (
-    <div className='topbar'>
+    <ul className='topbar'>
       <div className='topbar__hamburguer' onClick={setShowMenu}>
         <Menu />
       </div>
@@ -54,7 +54,7 @@ const Topbar = ({ setShowMenu }) => {
           </a>
         </li>
       </ul>
-    </div>
+    </ul>
   );
 };
 
